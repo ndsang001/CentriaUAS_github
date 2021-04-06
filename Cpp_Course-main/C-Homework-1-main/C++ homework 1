@@ -1,0 +1,80 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+  cout << fixed << setprecision(2); // to give the approximate result
+  
+  // assign variables
+  int accountNumber;
+  double balance, totalItems, totalCredits, creditLimit, newBalance;
+  char name[30], check;
+  
+  // introduction
+  cout << "\n--Welcome to New Balance Application--";
+  // check whether user want to use the app
+  cout << "\n\nDo you want to provide the input (Y/N)? ";
+  cin >> check; 
+// check whether there are any problems with the alphabet
+while(check != 'Y' && check != 'y' && check != 'N' && check != 'n'){
+
+  cout << "\nYour input is wrong! Please try again!";
+  cout << "\nDo you want to provide the input (Y/N)? ";
+  cin >> check;
+}
+if(check == 'Y' || check == 'y' ) // user want to use the function
+{
+  cout << "\n- Enter account number (or -1 for leaving): "; // user can stop the function by typing -1
+      cin >> accountNumber;
+
+  while(accountNumber != -1){ // this loop will stop when accountNumber = -1
+      // request information of customer
+      cout << "- Enter name of customer: ";
+      cin >> name;
+      cout << "- Enter original balance of customer: ";
+      cin >> balance;
+      cout << "- Enter total of all items charged by this customer this month: ";
+      cin >> totalItems;
+      cout << "- Enter total of all credits applied to this customers account this month: ";
+      cin >> totalCredits;
+      cout << "- Enter allowed credit limit: ";
+      cin >> creditLimit;
+      
+      cout << endl;
+      // showing information of customer
+      cout << "*** Account Number: " << accountNumber;
+      cout << "\n*** Name on account: " << name;
+      cout << "\n*** Original balance: " << balance;
+      cout << "\n*** Total of all items charged this month: " << totalItems;
+      cout << "\n*** Total of all credits applied this month: " << totalCredits;
+      cout << "\n*** Allowed credit limit: " << creditLimit;
+
+      newBalance = balance + totalItems - totalCredits; // calculate the new balance
+      
+      balance = newBalance; // now the balance will be new balance
+
+      if(creditLimit < newBalance){ // compare credit limit with new balance 
+      cout << "\n*** NEW BALANCE: " << newBalance;
+      cout << "\n*** The credit limit exceeded"; // anounce that the credit limit exceeded 
+      cout << endl;
+      } else{
+        cout << "\n*** NEW BALANCE: " << newBalance;
+      }
+      
+      cout << endl;
+
+      cout << "\n- Enter account number (or -1 for leaving): "; // user can continue with another customer info
+      cin >> accountNumber;
+  }
+  while (accountNumber == -1){ // function to stop the loop
+    cout << "\n--Thank you for using my app!--" << endl; 
+    cout << "\n--Have a nice day!!!--" << endl;
+    break;
+  }
+} else { // if customer choose N or n, the app will stop 
+  cout << "\n--Thank you for using my app!--" << endl; 
+  cout << "\n--Have a nice day!!!--" << endl;
+}  
+
+return 0;
+}

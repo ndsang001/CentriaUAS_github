@@ -1,0 +1,93 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <conio.h>
+
+int minMaxfunction(int randomArray[], int size){
+
+  int min, max, i;
+  min = max = randomArray[0];
+  for(i = 0; i < size; ++i){
+      
+      if(max < randomArray[i]){
+        max = randomArray[i];
+      } else if(min > randomArray[i]){
+        min = randomArray[i];
+      }
+  }
+  printf("\n\nMin of the random array is %d", min);
+  printf("\nMax of the random array is %d", max);
+}
+
+int findFunction(int randomArray[], int size){
+  
+  int i, find, found;
+
+  printf("\n\nEnter number you want to find: ");
+  scanf("%d", &find);
+
+  for(i = 0; i < size; ++i){
+    if(randomArray[i] == find){
+      found = 1;
+      break;
+    }
+  }
+  if(found == 1){
+      printf("\nYour number %d is in the array", find);
+      printf("\nThe number %d is located in %d position\n", find, ++i);
+  } else {
+    printf("Your number finding does not exist!\n");
+  }
+}
+
+int countFunction(int randomArray[], int size, int value, bool selected[]);
+
+int main(void) {
+  int size;
+  int randomArray[size], i, sum = 0;
+  bool map[size];
+  int counting;
+
+  printf("Enter the size of your expecting array: ");
+  scanf("%d", &size);
+
+  
+
+  printf("\nElements of the array: ");
+  for(i = 0; i < size; ++i){
+    randomArray[i] = rand()%100;
+    printf("%d ", randomArray[i]);
+    
+    sum += randomArray[i];
+
+  }
+
+  printf("\n\nThe sum of the random array is %d", sum);
+
+  printf("\n\nThe average of the random array is %d", sum/size);
+
+  minMaxfunction(randomArray, size);
+
+  findFunction(randomArray, size);
+
+  for(i = 0; i < size; ++i){
+    if(map[i] == 0){
+      counting = countFunction(randomArray, size, i, map);
+      printf("\nThe value %d is found %d time(s).", randomArray[i], counting);
+    }
+  }
+
+}
+
+int countFunction(int randomArray[], int size, int value, bool map[]){
+  
+  int i, count = 0;
+
+  for(i = value; i < size; ++i){
+    if(randomArray[i] == randomArray[value]){
+      map[i] = true;
+      ++count;
+    }    
+  }
+  return (count);
+}

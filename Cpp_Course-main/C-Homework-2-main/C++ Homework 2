@@ -1,0 +1,68 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+cout << fixed << setprecision(2);// to give the approximate result
+
+// assign variables
+int saleId;
+char name[30], check;
+double basicEarning = 150, grossSale, totalEarning;
+// introduction
+cout << "\n--Welcome to salesperson's earning application--";
+// check whether user want to use the app
+cout << "\n\nDo you want to provide the input (Y/N)? ";
+cin >> check; 
+// check whether there are any problems with the alphabet
+while(check != 'Y' && check != 'y' && check != 'N' && check != 'n')
+{
+  cout << "\nYour input is wrong! Please try again!";
+  cout << "\nDo you want to provide the input (Y/N)? ";
+  cin >> check;
+}
+
+cout << endl;
+
+if(check == 'Y' || check == 'y' ) // user want to use the function
+{
+  cout << "- Enter the salesperson ID (or -1 for leaving): ";// user can stop the function by typing -1
+  cin >> saleId;
+
+  while(saleId != -1){ // this loop will stop when saleId = -1
+    // request information of salesperson
+    cout << "- Enter salesperson's name: ";
+    cin >> name;
+    cout << "- Enter salesperson's gross sale last week: ";
+    cin >> grossSale;
+
+    cout << endl;
+
+    // showing information of salesperson
+    cout << "*** Salesperson ID: " << saleId;
+    cout << "\n*** Salesperson's name: " << name;
+    cout << "\n*** Gross sale last week: " << grossSale;
+
+    totalEarning = basicEarning + 0.12 * grossSale; // calculate the total earning of a salesperson
+
+    cout << "\n*** The total earning of \"" << name << "\" is " << totalEarning << endl;
+
+    cout << endl;
+
+    cout << "- Enter the salesperson ID (or -1 for leaving): "; // user can continue with another salesperson info
+    cin >> saleId; 
+  }
+
+  while(saleId == -1) // function to stop the loop
+  { 
+    cout << "\n--Thank you for using my app!--" << endl; 
+    cout << "\n--Have a nice day!!!--" << endl;
+    break;
+  }
+} else { // if user choose N or n, the app will stop
+    cout << "\n--Thank you for using my app!--" << endl; 
+    cout << "\n--Have a nice day!!!--" << endl;
+} 
+
+return 0;
+}
