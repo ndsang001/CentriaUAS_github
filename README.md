@@ -1,3 +1,3 @@
-# WWW-programming course
+# Centria UAS Courses
 
-This git repository shows my work on WWW-programming course!
+This git repository shows my works on Centria UAS courses!
