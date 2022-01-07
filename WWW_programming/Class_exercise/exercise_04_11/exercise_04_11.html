@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class exercise 04-11-2021</title>
+        <style>
+            h1{
+                color:blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML Forms</h1>
+        <h2>Form 1</h2>
+            <form action="http://localhost:9090/" method="get" target="_blank" id="form1">
+            <label for="form1" ></label>
+            <input type="hidden" name="hidden" value="Hello from form 1">
+            <input type="text" id="form1" name="text" required>
+            <input type="submit" value="Send Form 1">
+            </form>
+        <br>
+        <p><strong>Note:</strong> The hidden field is not shown to the user, but the data is sent when the form is submitted.</p>
+        <br>
+        <h2>Form 2</h2>
+            <form action="http://localhost:9090/" method="post" target="_blank">
+                <label for="form2" ></label>
+                <input type="hidden" name="hidden" value="Hello from form 2">
+                <textarea id="form2" name="message" rows="15" cols="35"></textarea>
+                <input type="submit" value="Send Form 2">
+            </form>
+
+    </body>
+</html>

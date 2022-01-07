@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <title>Menu Miyabi Sushi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="top_nav_section">
+                <div class="logo">
+                    <a href="index.html">
+                        <img id="logo" src="photo/logo.png" alt="Logo"> Miyabi Sushi
+                    </a>
+
+                </div>
+                <div class="nav_list">
+                    <ul id="main_menu">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="review.html">Review</a></li>
+                        <!-- <li>
+                        <a href="#cart" class="cart">
+                            <img id="cart_photo" src="photo/cart.png" alt="Photo from other webpage">
+                        </a>
+                    </li> -->
+                    </ul>
+
+                </div>
+                <!-- <div class="clearfix"></div> -->
+                <div class="cart">
+                    <a href="cart.html">
+                        <img id="cart_photo" src="photo/cart.png" alt="Photo from other webpage">
+                    </a>
+                </div>
+                <!-- <div class="clearfix"></div> -->
+            </div>
+        </div>
+        <div class="content">
+            <section class="container_menu sushi_list">
+                <h1 class="category_menu_page">Sushi List</h1>
+                <div class="items">
+                    <div class="item">
+                        <span class="name_of_item">Lohi</span>
+                        <img class="item_image" src="menu_sushi_list/lohi.jpeg">
+                        <div class="item_detail">
+                            <span class="price">3.5€</span>
+                            <span class="quantity">2pcs</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="name_of_item">Futomaki</span>
+                        <img class="item_image" src="menu_sushi_list/futomaki.jpeg">
+                        <div class="item_detail">
+                            <span class="price">10.5€</span>
+                            <span class="quantity">8pcs</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <span class="name_of_item">Kasvisrulla</span>
+                        <img class="item_image" src="menu_sushi_list/kasvisrulla.jpeg">
+                        <div class="item_detail">
+                            <span class="price">4.5€</span>
+                            <span class="quantity">10pcs</span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container_menu current_cart">
+                <h1 class="category_menu_page">Your items</h1>
+                <div class="cart_row">
+                    <span class="cart_item cart_header cart_column">ITEM</span>
+                    <span class="cart_price cart_header cart_column">PRICE</span>
+                    <span class="cart_quantity cart_header cart_column">QUANTITY</span>
+                </div>
+                <div class="cart_items">
+                </div>
+                <div class="cart_total">
+                    <strong class="cart_total_title">Total</strong>
+                    <span class="cart_total_price">$0</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            </section>
+
+        </div>
+    </div>
+    <script src="script_menu.js"></script>
+</body>
+
+</html>

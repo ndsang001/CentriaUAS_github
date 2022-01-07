@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <title>Miyabi Sushi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="top_nav_section">
+                <div class="logo">
+                    <a href="index.html">
+                        <img id="logo" src="photo/logo.png" alt="Logo"> Miyabi Sushi
+                    </a>
+
+                </div>
+                <div class="nav_list">
+                    <ul id="main_menu">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="review.html">Review</a></li>
+                        <!-- <li>
+                        <a href="#cart" class="cart">
+                            <img id="cart_photo" src="photo/cart.png" alt="Photo from other webpage">
+                        </a>
+                    </li> -->
+                    </ul>
+
+                </div>
+                <!-- <div class="clearfix"></div> -->
+                <div class="cart">
+                    <a href="cart.html">
+                        <img id="cart_photo" src="photo/cart.png" alt="Photo from other webpage">
+                    </a>
+                </div>
+                <!-- <div class="clearfix"></div> -->
+            </div>
+        </div>
+        <div class="content">
+            <section class="main_page_first_part">
+                <div class="welcome">
+                    <h1 id="welcome">Welcome to Miyabi Sushi Kokkola!</h1>
+                    <div class="slideshow_container_menu_page">
+
+                        <div class="image_slideshow fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="slideshow_main_page/christmas_copy.jpg" alt="Christmas photo">
+                            <div class="caption_text">Happy New Year 2022</div>
+                        </div>
+
+                        <div class="image_slideshow fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="slideshow_main_page/IMG_7067 2.JPG" alt="Sushi photo">
+                            <div class="caption_text">Sushi Buffet</div>
+                        </div>
+
+                        <div class="image_slideshow fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="slideshow_main_page/2.png" alt="food photo">
+                            <div class="caption_text">Asian cuisine</div>
+                        </div>
+
+                        <!-- <div class="prev_next_button"> -->
+                        <a class=" prev " onclick="controlSlides(-1) ">&#10094;</a>
+                        <a class="next " onclick="controlSlides(1) ">&#10095;</a>
+                        <!-- </div> -->
+
+                    </div>
+
+                    <br>
+
+                    <div style="text-align:center ">
+                        <span class="dot " onclick="currentSlide(1) "></span>
+                        <span class="dot " onclick="currentSlide(2) "></span>
+                        <span class="dot " onclick="currentSlide(3) "></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="link_subpage">
+                <div class="link_subpage_border">
+                    <div class="link_subpage_buttons">
+                        <a href="menu.html" id="link_menu">
+                            <span>Order now!</span>
+                        </a>
+                    </div>
+
+                    <div class="link_subpage_buttons_2">
+                        <a href="about.html" id="link_about">
+                            <span>Learn more about us!</span>
+                        </a>
+                    </div>
+
+                    <div class="link_subpage_buttons_3">
+                        <a href="#contact" id="link_contact">
+                            <span class="point" onclick="gotoinfo()">Contact us!</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="script_index.js"></script>
+</body>
+
+</html>

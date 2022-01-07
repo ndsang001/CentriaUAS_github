@@ -1,0 +1,101 @@
+
+* {
+    box-sizing: border-box; /* include the padding and border in an element's total width and height */
+    margin: 0; /* remove the default layout of the web */
+    padding: 0;
+}
+
+html { /* set a layout for the page */
+    border: 2px solid black; /* create border */
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 60%;
+    padding: 50px;
+    height: auto;
+}
+
+h1 { 
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /*margin-right: 150px;*/
+    margin-left: 21%;
+}
+
+hr { /* make hr more clear */
+    height: 3px; 
+    border-width: 1; 
+    width:90%; 
+    text-align:left; 
+    margin-left:0; 
+    background-color: black; 
+    color: black;
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+#id_h3_1 {
+    margin-top: 0px;
+}
+
+#id_img1 {
+    max-width:100%;
+    height:auto;
+}
+
+#main_div { 
+    overflow: hidden; 
+    display: flex; /* apply flex on display */
+    flex-wrap: wrap; /* wrap items if needed */
+    width: 100%;
+    float: left; /* make items float next to each other */
+}
+
+.first_part, .second_part {
+    flex-grow: 1; /* make the items have the relative block */
+    /*flex-basis: 1 0 50%;*/
+    word-wrap: break-word; /* break word if needed */
+}
+
+#first_div {
+    padding: 10px;
+    width: 21%;
+    background: #ccc;
+    
+}
+
+#second_div {
+    padding: 10px;
+    width: 79%;
+    /*background-color: #f1f1f1;*/
+    
+}
+
+.second_part table {
+    margin-top: 13px;
+    width: 90%;
+}
+
+#id_p1 {
+    margin-top: 13px;
+}
+
+#id_td1 {
+    width: 10%;
+    
+}
+
+#id_td2 {
+    width: 70%;
+    line-height: 1.4;
+}
+
+p {
+    padding: 2px;
+}
+
+tr {
+    padding: 2px;
+}

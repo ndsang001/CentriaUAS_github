@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: red;
+    font-size: xx-large;
+}
+
+.header {
+    background-color: bisque;
+}
+
+#first_blog {
+    color: blue;
+}
+
+/*div p {
+    color: chartreuse;
+}*/
+
+.content p {
+    color: darkmagenta;
+}
+
+.content {
+    border: black 1px solid;
+}
+
+/*a:hover {
+    color: seagreen;
+    font-size: xx-large;
+}*/
+
+/*a:visited {
+    font-size: xx-small;
+    color: darkorange;
+}*/
+
+a[href*= "google"] {
+    color: gold;
+}
+
+#second_blog::first-letter {
+    font-size: xx-large;
+}
+
+#copyright {
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    width:100%;
+    bottom: 0;
+
+}
+
+.main_page {
+    border: black 1px solid;
+}
+
+div.relative_container {
+    position: relative;
+    margin: 20px;
+    padding: 50px;
+    left: 50px;
+    border: solid 1px blue;
+
+}
