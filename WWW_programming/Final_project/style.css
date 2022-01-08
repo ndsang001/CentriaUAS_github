@@ -480,4 +480,8 @@
     .current_cart {
         text-align: center;
     }
+    
+    .cart_header {
+        font-weight: 900;
+    }
     /* End menu page */
