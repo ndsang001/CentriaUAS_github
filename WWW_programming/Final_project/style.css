@@ -437,8 +437,27 @@
     /* End review page*/
     /* Start menu page*/
     
+    .menu_page_background {
+        position: relative;
+        height: 100%
+    }
+    
+    .menu_page_background::before {
+        content: "";
+        background-image: url(background_photo/about_background.jpg);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
     .category_menu_page {
-        width: 1300px;
+        max-width: 1300px;
         text-align: center;
         line-height: 100px;
         letter-spacing: 13px;
@@ -448,6 +467,7 @@
         width: 1300px;
         height: auto;
         margin: 0 auto;
+        position: relative;
     }
     
     .items {
@@ -483,5 +503,73 @@
     
     .cart_header {
         font-weight: 900;
+    }
+    
+    .cart_row {
+        display: flex;
+        justify-content: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .cart_column {
+        display: flex;
+        align-items: center;
+        padding: 10px 0 10px 0;
+        border-bottom: solid black 1px;
+        margin-left: 25px;
+    }
+    
+    .cart_item {
+        width: 40%;
+    }
+    
+    .cart_price {
+        width: 20%;
+    }
+    
+    .cart_quantity {
+        width: 40%;
+    }
+    
+    .cart_item_image {
+        max-width: 100px;
+        max-height: 50px;
+        border-radius: 20px;
+        object-fit: contain;
+    }
+    
+    .cart_item_title {
+        margin-left: 10px;
+    }
+    
+    .cart_total {
+        padding: 10px 0 10px 0;
+    }
+    
+    .btn {
+        cursor: pointer;
+        padding: 10px 10px;
+        vertical-align: middle;
+    }
+    
+    .btn_primary {
+        background-color: #00FFFF;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .btn_primary:hover {
+        background-color: #2d9cdb;
+    }
+    
+    .btn_danger {
+        background-color: red;
+        border-radius: 5px;
+        border: none;
+    }
+    
+    .btn_danger:hover {
+        background-color: #CC4C4C;
     }
     /* End menu page */

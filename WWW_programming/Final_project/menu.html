@@ -3,6 +3,7 @@
 <head>
     <title>Menu Miyabi Sushi</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script_menu.js" async></script>
 </head>
 
 <body>
@@ -38,69 +39,81 @@
             </div>
         </div>
         <div class="content">
-            <section class="container_menu sushi_list">
-                <h1 class="category_menu_page">Sushi List</h1>
-                <div class="items">
-                    <div class="item">
-                        <span class="name_of_item">Lohi</span>
-                        <img class="item_image" src="menu_sushi_list/lohi.jpeg">
-                        <div class="item_detail">
-                            <span class="price">3.5€</span>
-                            <span class="quantity">2pcs</span>
-                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+            <div class="menu_page_background">
+                <section class="container_menu sushi_list">
+                    <h1 class="category_menu_page">Sushi List</h1>
+                    <div class="items">
+                        <div class="item">
+                            <span class="name_of_item">Lohi</span>
+                            <img class="item_image" src="menu_sushi_list/lohi.jpeg">
+                            <div class="item_detail">
+                                <span class="price">3.5€</span>
+                                <span class="quantity">2pcs</span>
+                                <button class="btn btn_primary shop_item_button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="name_of_item">Futomaki</span>
+                            <img class="item_image" src="menu_sushi_list/futomaki.jpeg">
+                            <div class="item_detail">
+                                <span class="price">10.5€</span>
+                                <span class="quantity">8pcs</span>
+                                <button class="btn btn_primary shop_item_button" type="button">ADD TO CART</button>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span class="name_of_item">Kasvisrulla</span>
+                            <img class="item_image" src="menu_sushi_list/kasvisrulla.jpeg">
+                            <div class="item_detail">
+                                <span class="price">4.5€</span>
+                                <span class="quantity">10pcs</span>
+                                <button class="btn btn_primary shop_item_button" type="button">ADD TO CART</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <span class="name_of_item">Futomaki</span>
-                        <img class="item_image" src="menu_sushi_list/futomaki.jpeg">
-                        <div class="item_detail">
-                            <span class="price">10.5€</span>
-                            <span class="quantity">8pcs</span>
-                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <span class="name_of_item">Kasvisrulla</span>
-                        <img class="item_image" src="menu_sushi_list/kasvisrulla.jpeg">
-                        <div class="item_detail">
-                            <span class="price">4.5€</span>
-                            <span class="quantity">10pcs</span>
-                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="container_menu current_cart">
-                <h1 class="category_menu_page">Your items</h1>
-                <div class="cart_row">
-                    <span class="cart_item cart_header cart_column">ITEM</span>
-                    <span class="cart_price cart_header cart_column">PRICE</span>
-                    <span class="cart_quantity cart_header cart_column">QUANTITY</span>
-                </div>
-                <div class="cart_items">
+                <section class="container_menu current_cart">
+                    <h1 class="category_menu_page">Your items</h1>
                     <div class="cart_row">
+                        <span class="cart_item cart_header cart_column">ITEM</span>
+                        <span class="cart_price cart_header cart_column">PRICE</span>
+                        <span class="cart_quantity cart_header cart_column">QUANTITY</span>
+                    </div>
+                    <div class="cart_items">
+                        <!-- <div class="cart_row">
                         <div class="cart_item cart_column">
-                            <img class="cart_item_image" src="menu_sushi_list/lohi.jpeg" width="100" height="100">
+                            <img class="cart_item_image" src="menu_sushi_list/lohi.jpeg">
                             <span class="cart_item_title">Lohi</span>
                         </div>
                         <span class="cart_price cart_column">3.5€</span>
-                        <div class="cart_quantity cart-column">
+                        <div class="cart_quantity cart_column">
                             <input class="cart_quantity_input" type="number" value="1">
-                            <button class="btn btn-danger" type="button">REMOVE</button>
+                            <button class="btn btn_danger" type="button">REMOVE</button>
                         </div>
                     </div>
-                </div>
-                <div class="cart_total">
-                    <strong class="cart_total_title">Total</strong>
-                    <span class="cart_total_price">$0</span>
-                </div>
-                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-            </section>
-
+                    <div class="cart_row">
+                        <div class="cart_item cart_column">
+                            <img class="cart_item_image" src="menu_sushi_list/futomaki.jpeg">
+                            <span class="cart_item_title">Futomaki</span>
+                        </div>
+                        <span class="cart_price cart_column">10.50€</span>
+                        <div class="cart_quantity cart_column">
+                            <input class="cart_quantity_input" type="number" value="2">
+                            <button class="btn btn_danger" type="button">REMOVE</button>
+                        </div>
+                    </div> -->
+                    </div>
+                    <div class="cart_total">
+                        <strong class="cart_total_title">Total</strong>
+                        <span class="cart_total_price">$0</span>
+                    </div>
+                    <a href="cart.html"><button class="btn btn_primary btn_purchase" type="button">PURCHASE</button></a>
+                </section>
+            </div>
         </div>
     </div>
-    <script src="script_menu.js"></script>
+
 </body>
 
 </html>
