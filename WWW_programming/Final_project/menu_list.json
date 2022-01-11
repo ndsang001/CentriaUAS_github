@@ -1,0 +1,7 @@
+{
+    "items": [
+        { "itemName": "Lohi", "itemImage": "menu_sushi_list/lohi.jpeg", "itemPrice": 3.5, "itemQuantity": 2 },
+        { "itemName": "Futomaki", "itemImage": "menu_sushi_list/futomaki.jpeg", "itemPrice": 10.5, "itemQuantity": 8 },
+        { "itemName": "Kasvisrulla", "itemImage": "menu_sushi_list/kasvisrulla.jpeg", "itemPrice": 4.5, "itemQuantity": 10 }
+    ]
+}

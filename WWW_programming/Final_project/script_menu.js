@@ -5,6 +5,14 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
+    var menuListData = JSON.parse(menu_list)
+    var item = document.createElement('div')
+    item.classList.add('item')
+    var items = document.getElementsByClassName('items')
+
+
+
+
     var addToCartButtons = document.getElementsByClassName('shop_item_button')
     for (let i = 0; i < addToCartButtons.length; ++i) {
         var button = addToCartButtons[i]
@@ -24,6 +32,8 @@ function ready() {
         input.addEventListener('change', quantityChanged)
     }
 }
+
+
 
 function removeCartItem(event) {
     var buttonClicked = event.target
