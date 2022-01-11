@@ -5,13 +5,15 @@ if (document.readyState == "loading") {
 }
 
 function ready() {
-    var menuListData = JSON.parse(menu_list)
-    var item = document.createElement('div')
-    item.classList.add('item')
-    var items = document.getElementsByClassName('items')
+    var menuListData = {
+        "items": [
+            { "itemName": "Lohi", "itemImage": "menu_sushi_list/lohi.jpeg", "itemPrice": 3.5, "itemQuantity": 2 },
+            { "itemName": "Futomaki", "itemImage": "menu_sushi_list/futomaki.jpeg", "itemPrice": 10.5, "itemQuantity": 8 },
+            { "itemName": "Kasvisrulla", "itemImage": "menu_sushi_list/kasvisrulla.jpeg", "itemPrice": 4.5, "itemQuantity": 10 }
+        ]
+    }
 
-
-
+    showMenuList(menuListData)
 
     var addToCartButtons = document.getElementsByClassName('shop_item_button')
     for (let i = 0; i < addToCartButtons.length; ++i) {
@@ -33,7 +35,26 @@ function ready() {
     }
 }
 
+function showMenuList(menuListData) {
+    var itemList = document.getElementsByClassName('items')[0]
 
+    for (let i in menuListData.items) {
+        console.log(menuListData.items.length)
+        var item = document.createElement('div')
+        item.classList.add('item')
+        var menuListContent = `
+            <span class="name_of_item">${menuListData.items[i].itemName}</span>
+            <img class="item_image" src="${menuListData.items[i].itemImage}">
+            <div class="item_detail">
+                <span class="price">${menuListData.items[i].itemPrice}€</span>
+                <span class="quantity">${menuListData.items[i].itemQuantity}pcs</span>
+                <button class="btn btn_primary shop_item_button" type="button">ADD TO CART</button>
+            </div>`
+
+        item.innerHTML += menuListContent
+        itemList.append(item)
+    }
+}
 
 function removeCartItem(event) {
     var buttonClicked = event.target
